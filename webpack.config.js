@@ -12,6 +12,7 @@ module.exports = {
     filename: '[name].bundle.js',
     publicPath: '/dist/'
   },
+  devtool: 'source-map',
   resolve: {
     extensions: ['', '.js', '.ts']
   },

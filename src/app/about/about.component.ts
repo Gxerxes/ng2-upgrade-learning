@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LogService } from "../services/log.service";
+import { LogService } from '../shared/services/log.service';
 
 @Component({
     selector: 'about',
@@ -7,6 +7,7 @@ import { LogService } from "../services/log.service";
 })
 export class AboutComponent implements OnInit {
     constructor(log: LogService) {
+        console.log('about', log);
     }
 
     ngOnInit() {

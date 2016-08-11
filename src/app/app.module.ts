@@ -4,10 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutModule } from './about/about.module';
-
-import { HighlightDirective } from './directives/highlight.directive';
-import { UppercasePipe } from './pipes/uppercase.pipe';
-import { LogService } from './services/log.service';
+import { ProdModule } from './prod/prod.module';
+import { SharedModule } from './shared/shared.module';
 
 import { appRouting } from './app.routing';
 
@@ -15,17 +13,16 @@ import { appRouting } from './app.routing';
     imports: [
         BrowserModule,
         AboutModule,
-        appRouting
+        ProdModule,
+        appRouting,
+        SharedModule.forRoot()
     ],
     declarations: [
         [
             AppComponent,
             HomeComponent
-        ],
-        HighlightDirective,
-        UppercasePipe
+        ]
     ],
-    providers: [LogService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
