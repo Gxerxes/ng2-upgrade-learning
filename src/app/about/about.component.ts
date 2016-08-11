@@ -3,7 +3,7 @@ import { LogService } from "../services/log.service";
 
 @Component({
     selector: 'about',
-    template: '<p highlight>{{"about" | uppercase}}</p>'
+    template: require('./about.component.html')
 })
 export class AboutComponent implements OnInit {
     constructor(log: LogService) {
